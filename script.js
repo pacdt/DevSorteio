@@ -2,27 +2,33 @@ const firstNumber = document.querySelector("#first-number");
 const secondNumber = document.querySelector("#second-number");
 const winnerNumber = document.querySelector(".winner-number");
 
-const result = document.querySelector(".resultado")
-const form = document.querySelector(".formulario-sorteio")
+firstNumber.focus();
 
-function sortear(){
-    let sortedNumber
+const result = document.querySelector(".resultado");
+const form = document.querySelector(".formulario-sorteio");
 
-    const min = parseInt(firstNumber.value)
-    const max = parseInt(secondNumber.value)
+function sortear() {
+	let sortedNumber;
 
-    sortedNumber = Math.floor(Math.random() * (max - min + 1) + min)
+	const min = parseInt(firstNumber.value);
+	const max = parseInt(secondNumber.value);
 
-    winnerNumber.innerHTML = sortedNumber
+	sortedNumber = Math.floor(Math.random() * (max - min + 1) + min);
 
-    form.id = "show"
-    result.id = ""
+	winnerNumber.innerHTML = sortedNumber;
 
+	form.id = "show";
+	result.id = "";
 
-    console.log(sortedNumber)
+	console.log(sortedNumber);
 }
 
-function novoSorteio(){
-    form.id = ""
-    result.id = "show"
+function novoSorteio() {
+	form.id = "";
+	result.id = "show";
+
+	firstNumber.value = "";
+	secondNumber.value = "";
+
+    firstNumber.focus();
 }
