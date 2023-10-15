@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>DevSorteio</title>
+	</head>
+	<body>
+		<div id="main">
+			<img
+				src="logo.svg"
+				alt="Logo DevSorteio: Um dado vermelho mostrando os números cinco, três e um com o nome DevSorteio abaixo" />
+			<div id="show" class="resultado">
+				<h2>O número sorteado foi:</h2>
+				<h2 class="winner-number">123</h2>
+				<div id="botoes">
+					<button onclick="sortear()">Sortear outro</button>
+					<button onclick="novoSorteio()">Novo Sorteio</button>
+				</div>
+			</div>
+			<div class="formulario-sorteio">
+				<h2>Sortear um número</h2>
+				<div id="inputs">
+					<input
+						type="number"
+						name=""
+						id="first-number"
+						placeholder="entre" />
+					<input
+						type="number"
+						name=""
+						id="second-number"
+						placeholder="e" />
+				</div>
+				<button onclick="sortear()">Sortear</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
